@@ -1,6 +1,9 @@
 ;; disable splash screen
 (setq inhibit-splash-screen t)
 
+;; maximize on startup
+(toggle-frame-maximized)
+
 ;; Evil
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
