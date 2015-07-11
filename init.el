@@ -1,3 +1,6 @@
+;; disable splash screen
+(setq inhibit-splash-screen t)
+
 ;; Evil
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
