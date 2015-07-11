@@ -4,6 +4,9 @@
 ;; maximize on startup
 (toggle-frame-maximized)
 
+;; display current column
+(column-number-mode)
+
 ;; Evil
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
