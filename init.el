@@ -3,6 +3,10 @@
 (require 'evil)
 (evil-mode 1)
 
+;; Solarized
+(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
+(load-theme 'solarized t)
+
 ;; markdown-mode
 (add-to-list 'load-path "~/.emacs.d/markdown-mode")
 (autoload 'markdown-mode "markdown-mode"
