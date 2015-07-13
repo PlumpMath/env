@@ -1,15 +1,13 @@
-;; disable splash screen
+;; disable splash screen, menu bar, and toolbar
 (setq inhibit-splash-screen t)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; maximize on startup
 (toggle-frame-maximized)
 
 ;; display current column
 (column-number-mode)
-
-;; disable menu bar and toolbar
-(menu-bar-mode -1)
-(tool-bar-mode -1)
 
 ;; Evil
 (add-to-list 'load-path "~/.emacs.d/evil")
