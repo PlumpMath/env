@@ -7,6 +7,10 @@
 ;; display current column
 (column-number-mode)
 
+;; disable menu bar and toolbar
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+
 ;; Evil
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
