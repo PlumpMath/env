@@ -18,15 +18,21 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
 (load-theme 'solarized t)
 (defun set-frame-background (mode)
-  "Set the current frame's Solarized background to MODE."
+  "Set the current frame's Solarized background to MODE.
+
+Some existing output in Term mode may keep its previous colors."
   (set-frame-parameter nil 'background-mode mode)
   (enable-theme 'solarized))
 (defun light ()
-  "Use the Solarized light background in the current frame."
+  "Use the Solarized light background in the current frame.
+
+See `set-frame-background' for more details."
   (interactive)
   (set-frame-background 'light))
 (defun dark ()
-  "Use the Solarized dark background in the current frame."
+  "Use the Solarized dark background in the current frame.
+
+See `set-frame-background' for more details."
   (interactive)
   (set-frame-background 'dark))
 
