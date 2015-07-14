@@ -1,7 +1,8 @@
-;; disable splash screen, menu bar, and toolbar
+;; disable splash screen, menu bar, toolbar, and scroll bars
 (setq inhibit-splash-screen t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; maximize on startup
 (toggle-frame-maximized)
