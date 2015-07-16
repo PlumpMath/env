@@ -10,6 +10,9 @@
 ;; display current column
 (column-number-mode)
 
+;; wrap at 80 columns
+(setq-default fill-column 80)
+
 ;; Evil
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
