@@ -10,8 +10,9 @@
 ;; display current column
 (column-number-mode)
 
-;; wrap at 80 columns
+;; fill to 80 columns with single spaces
 (setq-default fill-column 80)
+(setq sentence-end-double-space nil)
 
 ;; Evil
 (add-to-list 'load-path "~/.emacs.d/evil")
