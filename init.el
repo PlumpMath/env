@@ -14,6 +14,15 @@
 (setq-default fill-column 80)
 (setq sentence-end-double-space nil)
 
+;; GNU packages
+(setq packages '(auctex))
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+(dolist (package packages)
+  (unless (package-installed-p package)
+    (package-install package)))
+
 ;; Evil
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
