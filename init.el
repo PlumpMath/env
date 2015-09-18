@@ -15,11 +15,11 @@
 (setq sentence-end-double-space nil)
 
 ;; GNU packages
-(setq packages '(auctex))
 (package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
-(dolist (package packages)
+
+(dolist (package '(auctex))
   (unless (package-installed-p package)
     (package-install package)))
 
