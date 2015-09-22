@@ -18,6 +18,7 @@
 (defvar my-archives '(("melpa" . "https://melpa.org/packages/")))
 (defvar my-packages '(auctex
                       evil
+                      solarized-theme
                       markdown-mode))
 (require 'package)
 (dolist (my-archive my-archives)
@@ -33,26 +34,14 @@
 (evil-mode 1)
 
 ;; Solarized
-(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
-(load-theme 'solarized t)
-
-(defun set-frame-background (mode)
-  "Set the current frame's Solarized background to MODE.
-
-Some existing output in Term mode may keep its previous colors."
-  (set-frame-parameter nil 'background-mode mode)
-  (enable-theme 'solarized))
-
 (defun light ()
-  "Use the Solarized light background in the current frame.
-
-See `set-frame-background' for more details."
+  "Enable the Solarized light theme."
   (interactive)
-  (set-frame-background 'light))
+  (load-theme 'solarized-light t))
 
 (defun dark ()
-  "Use the Solarized dark background in the current frame.
-
-See `set-frame-background' for more details."
+  "Enable the Solarized dark theme."
   (interactive)
-  (set-frame-background 'dark))
+  (load-theme 'solarized-dark t))
+
+(light)
