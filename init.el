@@ -14,18 +14,22 @@
 (setq-default fill-column 80)
 (setq sentence-end-double-space nil)
 
-;; GNU packages
+;; packages
+(defvar my-archives '(("melpa" . "https://melpa.org/packages/")))
+(defvar my-packages '(auctex
+                      evil
+                      markdown-mode))
+(require 'package)
+(dolist (my-archive my-archives)
+  (add-to-list 'package-archives my-archive))
 (package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
-
-(dolist (package '(auctex))
-  (unless (package-installed-p package)
-    (package-install package)))
+(dolist (my-package my-packages)
+  (unless (package-installed-p my-package)
+    (package-install my-package)))
 
 ;; Evil
-(add-to-list 'load-path "~/.emacs.d/evil")
-(require 'evil)
 (evil-mode 1)
 
 ;; Solarized
@@ -52,7 +56,3 @@ See `set-frame-background' for more details."
 See `set-frame-background' for more details."
   (interactive)
   (set-frame-background 'dark))
-
-;; markdown-mode
-(add-to-list 'load-path "~/.emacs.d/markdown-mode")
-(require 'markdown-mode)
