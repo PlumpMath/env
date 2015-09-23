@@ -38,10 +38,8 @@
   "Enable the Solarized light theme."
   (interactive)
   (load-theme 'solarized-light t))
-
 (defun dark ()
   "Enable the Solarized dark theme."
   (interactive)
   (load-theme 'solarized-dark t))
-
 (light)
