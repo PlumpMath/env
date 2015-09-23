@@ -16,10 +16,12 @@
 
 ;; packages
 (defvar my-archives '(("melpa" . "https://melpa.org/packages/")))
-(defvar my-packages '(auctex
-                      evil
-                      solarized-theme
-                      markdown-mode))
+(defvar my-packages
+  '(evil
+    solarized-theme
+    magit
+    markdown-mode
+    auctex))
 (require 'package)
 (dolist (my-archive my-archives)
   (add-to-list 'package-archives my-archive))
