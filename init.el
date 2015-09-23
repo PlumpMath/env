@@ -30,10 +30,10 @@
   (unless (package-installed-p my-package)
     (package-install my-package)))
 
-;; Evil
+;; evil
 (evil-mode 1)
 
-;; Solarized
+;; solarized-theme
 (defun light ()
   "Enable the Solarized light theme."
   (interactive)
