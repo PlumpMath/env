@@ -45,3 +45,6 @@
   (interactive)
   (load-theme 'solarized-dark t))
 (light)
+
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
