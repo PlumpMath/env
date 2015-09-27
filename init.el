@@ -10,6 +10,9 @@
 ;; display current column
 (column-number-mode)
 
+;; use spaces instead of tabs
+(setq-default indent-tabs-mode nil)
+
 ;; fill to 80 columns with single spaces
 (setq-default fill-column 80)
 (setq sentence-end-double-space nil)
