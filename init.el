@@ -24,7 +24,9 @@
     solarized-theme
     magit
     markdown-mode
-    auctex))
+    auctex
+    clojure-mode
+    cider))
 (require 'package)
 (dolist (my-archive my-archives)
   (add-to-list 'package-archives my-archive))
