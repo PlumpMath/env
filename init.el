@@ -25,6 +25,7 @@
     magit
     markdown-mode
     auctex
+    paredit
     clojure-mode
     cider))
 (require 'package)
@@ -53,3 +54,8 @@
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; paredit
+(add-hook 'emacs-lisp-mode-hook 'paredit-mode)
+(add-hook 'clojure-mode-hook 'paredit-mode)
+(add-hook 'cider-repl-mode-hook 'paredit-mode)
