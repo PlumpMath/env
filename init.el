@@ -26,6 +26,7 @@
     markdown-mode
     auctex
     paredit
+    rainbow-delimiters
     clojure-mode
     cider))
 (require 'package)
@@ -59,3 +60,8 @@
 (add-hook 'emacs-lisp-mode-hook #'paredit-mode)
 (add-hook 'clojure-mode-hook #'paredit-mode)
 (add-hook 'cider-repl-mode-hook #'paredit-mode)
+
+;; rainbow-delimiters
+(add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
