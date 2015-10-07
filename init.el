@@ -28,7 +28,8 @@
     paredit
     rainbow-delimiters
     clojure-mode
-    cider))
+    cider
+    haskell-mode))
 (require 'package)
 (dolist (my-archive my-archives)
   (add-to-list 'package-archives my-archive))
