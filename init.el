@@ -17,52 +17,71 @@
 (setq-default fill-column 80)
 (setq sentence-end-double-space nil)
 
-;; packages
+;;; packages
 (defvar my-archives '(("melpa" . "https://melpa.org/packages/")))
+
 (defvar my-packages
-  '(evil
+  '(;; general
+    evil
     solarized-theme
+
+    ;; VCS
     magit
+
+    ;; markup
     markdown-mode
     auctex
+
+    ;; Lisp
     paredit
     rainbow-delimiters
+
+    ;; Clojure
     clojure-mode
     cider
+
+    ;; Haskell
     haskell-mode))
+
 (require 'package)
+
 (dolist (my-archive my-archives)
   (add-to-list 'package-archives my-archive))
+
 (package-initialize)
+
 (unless package-archive-contents
   (package-refresh-contents))
+
 (dolist (my-package my-packages)
   (unless (package-installed-p my-package)
     (package-install my-package)))
 
-;; evil
+;;; evil
 (evil-mode 1)
 
-;; solarized-theme
+;;; solarized-theme
 (defun light ()
   "Enable the Solarized light theme."
   (interactive)
   (load-theme 'solarized-light t))
+
 (defun dark ()
   "Enable the Solarized dark theme."
   (interactive)
   (load-theme 'solarized-dark t))
+
 (light)
 
-;; magit
+;;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
-;; paredit
+;;; paredit
 (add-hook 'emacs-lisp-mode-hook #'paredit-mode)
 (add-hook 'clojure-mode-hook #'paredit-mode)
 (add-hook 'cider-repl-mode-hook #'paredit-mode)
 
-;; rainbow-delimiters
+;;; rainbow-delimiters
 (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
