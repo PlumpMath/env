@@ -28,6 +28,9 @@
     ;; VCS
     magit
 
+    ;; project
+    projectile
+
     ;; markup
     markdown-mode
     auctex
@@ -76,6 +79,9 @@
 
 ;;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;;; projectile
+(projectile-global-mode)
 
 ;;; smartparens
 (defvar my-smartparens-bindings
