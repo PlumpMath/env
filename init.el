@@ -129,3 +129,21 @@
 
 ;;; rainbow-delimiters
 (add-hook 'smartparens-enabled-hook #'rainbow-delimiters-mode)
+
+;;; haskell-mode
+(defvar my-haskell-mode-bindings
+  '(("C-c C-l" . haskell-process-load-or-reload)
+    ("C-`" . haskell-interactive-bring)
+    ("C-c C-t" . haskell-process-do-type)
+    ("C-c C-i" . haskell-process-do-info)
+    ("C-c C-c" . haskell-process-cabal-build)
+    ("C-c C-k" . haskell-interactive-mode-clear)
+    ("C-c c" . haskell-process-cabal)
+    ("SPC" . haskell-mode-contextual-space)))
+
+(require 'haskell-interactive-mode)
+(require 'haskell-process)
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+
+(dolist (my-binding my-haskell-mode-bindings)
+  (define-key haskell-mode-map (kbd (car my-binding)) (cdr my-binding)))
