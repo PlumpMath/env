@@ -23,7 +23,7 @@
 (defvar my-packages
   '(;; general
     evil
-    solarized-theme
+    zenburn-theme
 
     ;; VCS
     magit
@@ -64,18 +64,8 @@
 ;;; evil
 (evil-mode 1)
 
-;;; solarized-theme
-(defun light ()
-  "Enable the Solarized light theme."
-  (interactive)
-  (load-theme 'solarized-light t))
-
-(defun dark ()
-  "Enable the Solarized dark theme."
-  (interactive)
-  (load-theme 'solarized-dark t))
-
-(light)
+;;; zenburn-theme
+(load-theme 'zenburn t)
 
 ;;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
