@@ -25,6 +25,9 @@
     evil
     zenburn-theme
 
+    ;; autocomplete
+    company
+
     ;; VCS
     magit
 
@@ -66,6 +69,10 @@
 
 ;;; zenburn-theme
 (load-theme 'zenburn t)
+
+;;; company
+(global-company-mode)
+(setq company-idle-delay 0)
 
 ;;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
