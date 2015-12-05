@@ -17,6 +17,9 @@
 (setq-default fill-column 80)
 (setq sentence-end-double-space nil)
 
+;; windmove
+(windmove-default-keybindings)
+
 ;;; packages
 (defvar my-archives '(("melpa" . "https://melpa.org/packages/")))
 
