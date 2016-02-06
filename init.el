@@ -49,6 +49,7 @@
     ;; Clojure
     clojure-mode
     cider
+    clj-refactor
 
     ;; Haskell
     haskell-mode))
@@ -129,6 +130,13 @@
 
 ;;; rainbow-delimiters
 (add-hook 'smartparens-enabled-hook #'rainbow-delimiters-mode)
+
+;;; clj-refactor
+(add-hook 'clojure-mode-hook
+          (lambda ()
+            (clj-refactor-mode 1)
+            (yas-minor-mode 1)
+            (cljr-add-keybindings-with-prefix "C-c C-m")))
 
 ;;; haskell-mode
 (defvar my-haskell-mode-bindings
