@@ -17,6 +17,9 @@
 (setq-default fill-column 80)
 (setq sentence-end-double-space nil)
 
+;; ido
+(ido-mode 1)
+
 ;; windmove
 (windmove-default-keybindings)
 
