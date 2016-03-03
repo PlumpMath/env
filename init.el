@@ -54,6 +54,9 @@
     cider
     clj-refactor
 
+    ;; Scheme
+    geiser
+
     ;; Haskell
     haskell-mode))
 
@@ -124,6 +127,8 @@
 (add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
 (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
 (add-hook 'cider-repl-mode-hook #'smartparens-strict-mode)
+(add-hook 'geiser-mode-hook #'smartparens-strict-mode)
+(add-hook 'geiser-repl-mode-hook #'smartparens-strict-mode)
 
 (dolist (my-binding my-smartparens-bindings)
   (define-key smartparens-mode-map (kbd (car my-binding)) (cdr my-binding)))
@@ -140,6 +145,9 @@
             (clj-refactor-mode 1)
             (yas-minor-mode 1)
             (cljr-add-keybindings-with-prefix "C-c C-m")))
+
+;;; geiser
+(setq geiser-active-implementations '(racket))
 
 ;;; haskell-mode
 (defvar my-haskell-mode-bindings
