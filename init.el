@@ -140,6 +140,7 @@
 (add-hook 'smartparens-enabled-hook #'rainbow-delimiters-mode)
 
 ;;; clj-refactor
+(setq cljr-warn-on-eval nil)
 (add-hook 'clojure-mode-hook
           (lambda ()
             (clj-refactor-mode 1)
