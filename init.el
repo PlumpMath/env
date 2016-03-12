@@ -44,6 +44,9 @@
     markdown-mode
     auctex
 
+    ;; web
+    impatient-mode
+
     ;; Lisp
     smartparens
     evil-smartparens
