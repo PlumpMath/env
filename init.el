@@ -126,6 +126,7 @@
     ("C-M-]" . sp-select-next-thing-exchange)))
 
 (require 'smartparens-config)
+(setq sp-cancel-autoskip-on-backward-movement nil)
 
 (add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
 (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
