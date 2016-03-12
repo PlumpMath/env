@@ -13,6 +13,9 @@
 ;; use spaces instead of tabs
 (setq-default indent-tabs-mode nil)
 
+;; indent CSS with 2 space
+(setq css-indent-offset 2)
+
 ;; fill to 80 columns with single spaces
 (setq-default fill-column 80)
 (setq sentence-end-double-space nil)
@@ -135,6 +138,7 @@
 (setq sp-cancel-autoskip-on-backward-movement nil)
 
 (add-hook 'html-mode-hook #'smartparens-strict-mode)
+(add-hook 'css-mode-hook #'smartparens-strict-mode)
 (add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
 (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
 (add-hook 'cider-repl-mode-hook #'smartparens-strict-mode)
