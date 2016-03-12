@@ -128,6 +128,7 @@
 (require 'smartparens-config)
 (setq sp-cancel-autoskip-on-backward-movement nil)
 
+(add-hook 'html-mode-hook #'smartparens-strict-mode)
 (add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
 (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
 (add-hook 'cider-repl-mode-hook #'smartparens-strict-mode)
