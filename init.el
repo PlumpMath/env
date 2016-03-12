@@ -41,6 +41,7 @@
     projectile
 
     ;; markup
+    tagedit
     markdown-mode
     auctex
 
@@ -92,6 +93,11 @@
 
 ;;; projectile
 (projectile-global-mode)
+
+;;; tagedit
+(add-hook 'html-mode-hook #'tagedit-mode)
+(tagedit-add-experimental-features)
+(setq tagedit-expand-one-line-tags nil)
 
 ;;; smartparens
 (defvar my-smartparens-bindings
