@@ -8,7 +8,7 @@
 (toggle-frame-maximized)
 
 ;; display current column
-(column-number-mode)
+(column-number-mode 1)
 
 ;; use spaces instead of tabs
 (setq-default indent-tabs-mode nil)
@@ -109,7 +109,7 @@
 (ido-yes-or-no-mode 1)
 
 ;;; company
-(global-company-mode)
+(global-company-mode 1)
 (setq company-idle-delay 0)
 
 ;;; magit
@@ -117,14 +117,23 @@
 (setq magit-completing-read-function 'magit-ido-completing-read)
 
 ;;; projectile
-(projectile-global-mode)
+(projectile-global-mode 1)
 
 ;;; tagedit
-(add-hook 'html-mode-hook #'tagedit-mode)
+(add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))
 (tagedit-add-experimental-features)
 (setq tagedit-expand-one-line-tags nil)
 
 ;;; smartparens
+(defvar my-smartparens-modes
+  '(html-mode-hook
+    css-mode-hook
+    emacs-lisp-mode-hook
+    clojure-mode-hook
+    cider-repl-mode-hook
+    geiser-mode-hook
+    geiser-repl-mode-hook))
+
 (defvar my-smartparens-bindings
   '(("C-M-f" . sp-next-sexp)
     ("C-M-b" . sp-backward-sexp)
@@ -159,22 +168,17 @@
 (require 'smartparens-config)
 (setq sp-cancel-autoskip-on-backward-movement nil)
 
-(add-hook 'html-mode-hook #'smartparens-strict-mode)
-(add-hook 'css-mode-hook #'smartparens-strict-mode)
-(add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
-(add-hook 'clojure-mode-hook #'smartparens-strict-mode)
-(add-hook 'cider-repl-mode-hook #'smartparens-strict-mode)
-(add-hook 'geiser-mode-hook #'smartparens-strict-mode)
-(add-hook 'geiser-repl-mode-hook #'smartparens-strict-mode)
+(dolist (mode-hook my-smartparens-modes)
+  (add-hook mode-hook (lambda () (smartparens-strict-mode 1))))
 
 (dolist (my-binding my-smartparens-bindings)
   (define-key smartparens-mode-map (kbd (car my-binding)) (cdr my-binding)))
 
 ;;; evil-smartparens
-(add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
+(add-hook 'smartparens-enabled-hook (lambda () (evil-smartparens-mode 1)))
 
 ;;; rainbow-delimiters
-(add-hook 'smartparens-enabled-hook #'rainbow-delimiters-mode)
+(add-hook 'smartparens-enabled-hook (lambda () (rainbow-delimiters-mode 1)))
 
 ;;; clj-refactor
 (setq cljr-warn-on-eval nil)
