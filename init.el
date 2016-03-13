@@ -10,11 +10,10 @@
 ;; display current column
 (column-number-mode 1)
 
-;; use spaces instead of tabs
+;; indent with 2 spaces, no tabs
 (setq-default indent-tabs-mode nil)
-
-;; indent CSS with 2 space
 (setq css-indent-offset 2)
+(setq js-indent-level 2)
 
 ;; fill to 80 columns with single spaces
 (setq-default fill-column 80)
