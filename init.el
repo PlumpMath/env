@@ -20,6 +20,9 @@
 (setq-default fill-column 80)
 (setq sentence-end-double-space nil)
 
+;; show trailing whitespace
+(setq-default show-trailing-whitespace t)
+
 ;; ido
 (ido-mode 1)
 (ido-everywhere 1)
