@@ -22,6 +22,7 @@
 
 ;; ido
 (ido-mode 1)
+(ido-everywhere 1)
 
 ;; windmove
 (windmove-default-keybindings)
@@ -33,6 +34,11 @@
   '(;; general
     evil
     zenburn-theme
+
+    ;; ido
+    ido-ubiquitous
+    smex
+    ido-yes-or-no
 
     ;; autocomplete
     company
@@ -87,12 +93,28 @@
 ;;; zenburn-theme
 (load-theme 'zenburn t)
 
+;;; ido-ubiquitous
+(ido-ubiquitous-mode 1)
+
+;;; smex
+(defvar my-smex-bindings
+  '(("M-x" . smex)
+    ("M-X" . smex-major-mode-commands)
+    ("C-c C-c M-x" . execute-extended-command)))
+
+(dolist (my-binding my-smex-bindings)
+  (global-set-key (kbd (car my-binding)) (cdr my-binding)))
+
+;;; ido-yes-or-no
+(ido-yes-or-no-mode 1)
+
 ;;; company
 (global-company-mode)
 (setq company-idle-delay 0)
 
 ;;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
+(setq magit-completing-read-function 'magit-ido-completing-read)
 
 ;;; projectile
 (projectile-global-mode)
