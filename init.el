@@ -93,7 +93,17 @@
 (evil-mode 1)
 
 ;;; zenburn-theme
-(load-theme 'zenburn t)
+(defvar my-theme 'zenburn)
+(defvar *my-theme-active* nil)
+
+(defun theme ()
+  (interactive)
+  (if *my-theme-active*
+      (disable-theme my-theme)
+    (load-theme my-theme t))
+  (setq *my-theme-active* (not *my-theme-active*)))
+
+(theme)
 
 ;;; ido-ubiquitous
 (ido-ubiquitous-mode 1)
