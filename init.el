@@ -192,6 +192,9 @@
 ;;; rainbow-delimiters
 (add-hook 'smartparens-enabled-hook (lambda () (rainbow-delimiters-mode 1)))
 
+;;; cider
+(setq cider-repl-display-help-banner nil)
+
 ;;; clj-refactor
 (setq cljr-warn-on-eval nil)
 (add-hook 'clojure-mode-hook
