@@ -126,7 +126,7 @@
 
 ;;; company
 (global-company-mode 1)
-(setq company-idle-delay 0)
+(setq company-idle-delay 0.1)
 
 ;;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
