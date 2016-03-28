@@ -10,6 +10,13 @@
 ;; display current column
 (column-number-mode 1)
 
+;; ido
+(ido-mode 1)
+(ido-everywhere 1)
+
+;; windmove
+(windmove-default-keybindings)
+
 ;; indent with 2 spaces, no tabs
 (setq-default indent-tabs-mode nil)
 (setq css-indent-offset 2)
@@ -21,13 +28,6 @@
 
 ;; show trailing whitespace
 (setq-default show-trailing-whitespace t)
-
-;; ido
-(ido-mode 1)
-(ido-everywhere 1)
-
-;; windmove
-(windmove-default-keybindings)
 
 ;;; packages
 (defvar my-archives '(("melpa" . "https://melpa.org/packages/")))
