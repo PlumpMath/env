@@ -10,6 +10,10 @@
 ;; display current column
 (column-number-mode 1)
 
+;; swap C-s and C-x C-s
+(global-set-key (kbd "C-s") 'save-buffer)
+(global-set-key (kbd "C-x C-s") 'isearch-forward)
+
 ;; ido
 (ido-mode 1)
 (ido-everywhere 1)
