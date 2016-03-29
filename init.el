@@ -54,6 +54,7 @@
 
     ;; project
     projectile
+    project-explorer
 
     ;; markup
     tagedit
@@ -134,6 +135,10 @@
 
 ;;; projectile
 (projectile-global-mode 1)
+
+;;; project-explorer
+(global-set-key (kbd "C-x p") 'project-explorer-open)
+(add-to-list 'evil-emacs-state-modes 'project-explorer-mode)
 
 ;;; tagedit
 (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))
