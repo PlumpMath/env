@@ -1,5 +1,7 @@
-# emacs-d
+# .emacs.d
 
-My personal `~/.emacs.d` directory. Setup:
+My personal
+[`~/.emacs.d` directory](https://www.emacswiki.org/emacs/DotEmacsDotD). Run this
+in your home directory:
 
-    git clone https://github.com/elogent/emacs-d.git ~/.emacs.d
+    git clone https://github.com/elogent/.emacs.d.git
