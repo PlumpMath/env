@@ -92,6 +92,7 @@
 
 ;;; evil
 (evil-mode 1)
+(fset 'evil-visual-update-x-selection 'ignore)
 
 ;;; zenburn-theme
 (defvar my-theme 'zenburn)
