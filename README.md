@@ -6,7 +6,7 @@ My Linux environment. Initial setup:
 sudo apt-get install git
 git clone https://github.com/elogent/env.git
 cd env
-./env.sh
+sudo ./env.sh
 ```
 
 [Apparently](http://stackoverflow.com/q/59895/5044950), getting the parent
