@@ -8,3 +8,5 @@ git config --global user.name elogent
 apt-get install emacs
 rm ~/.emacs.el
 ln -s "$PWD/emacs.el" ~/.emacs.el
+
+apt-get install keepassx
