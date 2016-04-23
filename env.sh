@@ -13,6 +13,13 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 
+sudo curl -Lo /usr/local/bin/boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh
+sudo chmod +x /usr/local/bin/boot
+mkdir ~/.boot
+echo BOOT_CLOJURE_VERSION=1.8.0 > ~/.boot/boot.properties
+echo BOOT_EMIT_TARGET=no >> ~/.boot/boot.properties
+boot -u
+
 sudo apt-get install keepassx
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
