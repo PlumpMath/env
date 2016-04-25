@@ -8,6 +8,8 @@ git config --global user.name elogent
 sudo apt install emacs
 ln -fs "$PWD/emacs.el" ~/.emacs.el
 
+sudo apt install pandoc
+
 sudo rm /etc/apt/sources.list.d/webupd8team-ubuntu-java-*
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt update
