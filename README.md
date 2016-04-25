@@ -3,7 +3,7 @@
 My Linux environment. Initial setup:
 
 ```sh
-sudo apt-get install git
+sudo apt install git
 git clone https://github.com/elogent/env.git
 cd env
 ./env.sh
