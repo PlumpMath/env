@@ -1,6 +1,6 @@
 # env
 
-My Linux environment. Initial setup:
+My Ubuntu environment. Initial setup:
 
 ```sh
 sudo apt install git
