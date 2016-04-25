@@ -1,9 +1,3 @@
-# Linux backup files
 *~
-
-# Vim temporary files
-*.swp
-
-# Emacs temporary files
 \#*#
 .#*
