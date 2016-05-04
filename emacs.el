@@ -29,6 +29,10 @@
 ;; show trailing whitespace
 (setq-default show-trailing-whitespace t)
 
+;; disable backup and autosave files
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
 ;;; packages
 (defvar my-archives '(("melpa" . "https://melpa.org/packages/")))
 
