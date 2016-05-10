@@ -1,8 +1,8 @@
 #!/bin/sh
 
 git config --global push.default simple
-git config --global user.email elogent@users.noreply.github.com
-git config --global user.name elogent
+git config --global user.name "Sam Estep"
+git config --global user.email sam@samestep.com
 
 sudo apt install emacs
 ln -fs "$PWD/emacs.el" ~/.emacs.el

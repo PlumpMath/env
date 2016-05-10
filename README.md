@@ -4,7 +4,7 @@ My Ubuntu environment. Initial setup:
 
 ```sh
 sudo apt install git
-git clone https://github.com/elogent/env.git
+git clone https://github.com/samestep/env.git
 cd env
 ./env.sh
 ```
