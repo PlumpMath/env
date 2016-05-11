@@ -30,6 +30,8 @@ echo BOOT_EMIT_TARGET=no >> ~/.boot/boot.properties
 ln -fs "$PWD/profile.boot" ~/.boot/profile.boot
 boot -u
 
+sudo apt install racket
+
 sudo apt install haskell-platform
 
 sudo apt install keepassx
