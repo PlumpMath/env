@@ -30,6 +30,8 @@ echo BOOT_EMIT_TARGET=no >> ~/.boot/boot.properties
 ln -fs "$PWD/profile.boot" ~/.boot/profile.boot
 boot -u
 
+sudo apt install haskell-platform
+
 sudo apt install keepassx
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
