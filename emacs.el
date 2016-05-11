@@ -49,6 +49,9 @@
     ;; autocomplete
     company
 
+    ;; flycheck
+    flycheck-pos-tip
+
     ;; VCS
     magit
 
@@ -73,6 +76,7 @@
     clojure-mode
     cider
     clj-refactor
+    flycheck-clojure
 
     ;; Scheme
     geiser
@@ -129,6 +133,10 @@
 ;;; company
 (global-company-mode 1)
 (setq company-idle-delay 0.1)
+
+;;; flycheck-pos-tip
+(with-eval-after-load 'flycheck
+  (flycheck-pos-tip-mode))
 
 ;;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -212,6 +220,10 @@
             (clj-refactor-mode 1)
             (yas-minor-mode 1)
             (cljr-add-keybindings-with-prefix "C-c C-m")))
+
+;;; flycheck-clojure
+(eval-after-load 'flycheck '(flycheck-clojure-setup))
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;;; geiser
 (setq geiser-active-implementations '(racket))
