@@ -212,6 +212,7 @@
 
 ;;; cider
 (setq cider-repl-display-help-banner nil)
+(put 'cider-boot-parameters 'safe-local-variable #'stringp)
 
 ;;; clj-refactor
 (setq cljr-warn-on-eval nil)
