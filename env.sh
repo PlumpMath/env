@@ -33,6 +33,8 @@ boot -u
 
 sudo apt install racket
 
+sudo apt install nautilus-dropbox
+
 sudo apt install keepassx
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
