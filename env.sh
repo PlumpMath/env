@@ -27,7 +27,6 @@ sudo curl -Lo /usr/local/bin/boot https://github.com/boot-clj/boot-bin/releases/
 sudo chmod +x /usr/local/bin/boot
 mkdir ~/.boot
 echo BOOT_CLOJURE_VERSION=1.8.0 > ~/.boot/boot.properties
-echo BOOT_EMIT_TARGET=no >> ~/.boot/boot.properties
 ln -fs "$PWD/profile.boot" ~/.boot/profile.boot
 boot -u
 
