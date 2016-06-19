@@ -151,6 +151,9 @@
 (tagedit-add-experimental-features)
 (setq tagedit-expand-one-line-tags nil)
 
+;;; markdown-mode
+(setq markdown-command "pandoc -sf commonmark")
+
 ;;; smartparens
 (defvar my-smartparens-modes
   '(html-mode-hook
