@@ -9,6 +9,8 @@ cd env
 ./env.sh
 ```
 
-[Apparently](http://stackoverflow.com/q/59895/5044950), getting the parent
-directory of a shell script is hard, so all the scripts in this repository
-assume that they will be run from the repository root.
+[Apparently][parent directory question], getting the parent directory of a shell
+script is hard, so all the scripts in this repository assume that they will be
+run from the repository root.
+
+[parent directory question]: http://stackoverflow.com/q/59895/5044950
