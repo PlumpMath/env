@@ -1,5 +1,6 @@
 #!/bin/sh
 
+sudo apt install git
 git config --global push.default simple
 git config --global credential.helper "cache --timeout=3600"
 git config --global user.name "Sam Estep"
