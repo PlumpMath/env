@@ -6,6 +6,8 @@ git config --global credential.helper "cache --timeout=3600"
 git config --global user.name "Sam Estep"
 git config --global user.email sam@samestep.com
 
+sudo apt install vim
+
 sudo apt install emacs
 ln -fs "$PWD/emacs.el" ~/.emacs.el
 
