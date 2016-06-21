@@ -16,6 +16,8 @@ sudo apt install pandoc
 
 sudo apt install texlive
 
+sudo apt install clang
+
 sudo rm /etc/apt/sources.list.d/webupd8team-ubuntu-java-*
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt update
