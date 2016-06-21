@@ -5,6 +5,7 @@ git config --global push.default simple
 git config --global credential.helper "cache --timeout=3600"
 git config --global user.name "Sam Estep"
 git config --global user.email sam@samestep.com
+git config --global user.signingkey 2B42037F
 
 sudo apt install vim
 
