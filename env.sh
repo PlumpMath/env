@@ -38,8 +38,6 @@ echo BOOT_CLOJURE_VERSION=1.8.0 > ~/.boot/boot.properties
 ln -fs "$PWD/profile.boot" ~/.boot/profile.boot
 boot -u
 
-sudo apt install racket
-
 sudo apt install nautilus-dropbox
 
 sudo apt install keepassx

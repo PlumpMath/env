@@ -76,10 +76,7 @@
     clojure-mode
     cider
     clj-refactor
-    flycheck-clojure
-
-    ;; Scheme
-    geiser))
+    flycheck-clojure))
 
 (require 'package)
 
@@ -160,9 +157,7 @@
     css-mode-hook
     emacs-lisp-mode-hook
     clojure-mode-hook
-    cider-repl-mode-hook
-    geiser-mode-hook
-    geiser-repl-mode-hook))
+    cider-repl-mode-hook))
 
 (defvar my-smartparens-bindings
   '(("C-M-f" . sp-next-sexp)
@@ -225,6 +220,3 @@
 ;;; flycheck-clojure
 (eval-after-load 'flycheck '(flycheck-clojure-setup))
 (add-hook 'after-init-hook #'global-flycheck-mode)
-
-;;; geiser
-(setq geiser-active-implementations '(racket))
