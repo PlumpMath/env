@@ -67,6 +67,9 @@
     ;; web
     impatient-mode
 
+    ;; tests
+    toggle-test
+
     ;; Lisp
     smartparens
     evil-smartparens
@@ -150,6 +153,11 @@
 
 ;;; markdown-mode
 (setq markdown-command "pandoc -sf commonmark")
+
+;;; toggle-test
+(global-set-key (kbd "C-c t") 'tgt-toggle)
+(setq tgt-open-in-new-window nil)
+(put 'tgt-projects 'safe-local-variable #'listp)
 
 ;;; smartparens
 (defvar my-smartparens-modes
