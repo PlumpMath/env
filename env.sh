@@ -10,7 +10,8 @@ git config --global user.signingkey 2B42037F
 sudo apt install vim
 
 sudo apt install emacs
-ln -fs "$PWD/emacs.el" ~/.emacs.el
+mkdir ~/.emacs.d
+ln -fs "$PWD/init.el" ~/.emacs.d/init.el
 
 sudo apt install pandoc
 
