@@ -45,6 +45,11 @@
               (cljr-add-keybindings-with-prefix "C-c C-m")))
   (setq cljr-warn-on-eval nil))
 
+(use-package clojure-mode
+  :config
+  (define-clojure-indent
+    (clojure.spec/fdef 1)))
+
 (use-package company
   :init
   (setq company-idle-delay 0.1)
