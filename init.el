@@ -71,10 +71,6 @@
   :config
   (global-flycheck-mode 1))
 
-(use-package flycheck-clojure
-  :config
-  (flycheck-clojure-setup))
-
 (use-package flycheck-pos-tip
   :config
   (flycheck-pos-tip-mode 1))
