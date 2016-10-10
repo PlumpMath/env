@@ -38,6 +38,8 @@ echo BOOT_CLOJURE_VERSION=1.8.0 > ~/.boot/boot.properties
 ln -fs "$PWD/profile.boot" ~/.boot/profile.boot
 boot -u
 
+curl -sSf https://static.rust-lang.org/rustup.sh | sh
+
 sudo apt install nautilus-dropbox
 
 sudo apt install keepassx
