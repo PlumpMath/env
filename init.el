@@ -152,6 +152,9 @@
   (tagedit-add-experimental-features))
 
 (use-package tex-site
-  :ensure auctex)
+  :ensure auctex
+  :init
+  (setq font-latex-fontify-sectioning 'color
+        font-latex-fontify-script nil))
 
 (use-package zenburn-theme)
