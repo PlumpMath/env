@@ -154,6 +154,7 @@
 (use-package tex-site
   :ensure auctex
   :init
+  (setq-default TeX-engine 'xetex)
   (setq font-latex-fontify-sectioning 'color
         font-latex-fontify-script nil))
 

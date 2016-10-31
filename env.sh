@@ -16,7 +16,7 @@ ln -fs "$PWD/init.el" ~/.emacs.d/init.el
 
 sudo apt install pandoc
 
-sudo apt install texlive
+sudo apt install texlive texlive-xetex
 
 sudo apt install clang
 
