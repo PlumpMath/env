@@ -91,6 +91,8 @@
   :init
   (add-hook 'smartparens-enabled-hook (lambda () (rainbow-delimiters-mode 1))))
 
+(use-package rust-mode)
+
 (use-package smartparens
   :bind (:map smartparens-mode-map
          ("C-M-f" . sp-next-sexp)
