@@ -31,20 +31,6 @@
 (package-install 'use-package)
 (setq use-package-always-ensure t)
 
-(use-package cider
-  :init
-  (setq cider-repl-display-help-banner nil)
-  (put 'cider-boot-parameters 'safe-local-variable #'stringp))
-
-(use-package clj-refactor
-  :init
-  (add-hook 'clojure-mode-hook
-            (lambda ()
-              (clj-refactor-mode 1)
-              (yas-minor-mode 1)
-              (cljr-add-keybindings-with-prefix "C-c C-m")))
-  (setq cljr-warn-on-eval nil))
-
 (use-package clojure-mode
   :config
   (define-clojure-indent
