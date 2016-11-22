@@ -61,6 +61,10 @@
   :config
   (flycheck-pos-tip-mode 1))
 
+(use-package flycheck-rust
+  :init
+  (add-hook 'flycheck-mode-hook (lambda () (flycheck-rust-setup))))
+
 (use-package ido-ubiquitous
   :config
   (ido-ubiquitous-mode 1))
