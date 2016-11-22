@@ -95,6 +95,15 @@
   :config
   (projectile-global-mode 1))
 
+(use-package racer
+  :init
+  (setq racer-rust-src-path
+        (concat "~/.multirust/toolchains/"
+                "stable-x86_64-unknown-linux-gnu"
+                "/lib/rustlib/src/rust/src"))
+  (add-hook 'rust-mode-hook (lambda () (racer-mode)))
+  (add-hook 'racer-mode-hook (lambda () (eldoc-mode 1))))
+
 (use-package rainbow-delimiters
   :init
   (add-hook 'smartparens-enabled-hook (lambda () (rainbow-delimiters-mode 1))))

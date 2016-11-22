@@ -38,7 +38,9 @@ echo BOOT_CLOJURE_VERSION=1.8.0 > ~/.boot/boot.properties
 ln -fs "$PWD/profile.boot" ~/.boot/profile.boot
 boot -u
 
-curl -sSf https://static.rust-lang.org/rustup.sh | sh
+curl https://sh.rustup.rs -sSf | sh
+cargo install racer
+rustup component add rust-src
 
 sudo apt install nautilus-dropbox
 
