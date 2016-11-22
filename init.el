@@ -31,6 +31,10 @@
 (package-install 'use-package)
 (setq use-package-always-ensure t)
 
+(use-package cargo
+  :init
+  (add-hook 'rust-mode-hook 'cargo-minor-mode))
+
 (use-package clojure-mode
   :config
   (define-clojure-indent
