@@ -1,7 +1,7 @@
 (require 'boot.repl)
 
 (swap! boot.repl/*default-dependencies* conj
-       '[cider/cider-nrepl "0.14.0-SNAPSHOT"]
+       '[cider/cider-nrepl "0.15.0-SNAPSHOT"]
        '[refactor-nrepl "2.3.0-SNAPSHOT"])
 
 (swap! boot.repl/*default-middleware* conj
