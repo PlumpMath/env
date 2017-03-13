@@ -1,0 +1,8 @@
+"*":
+  core:
+    disabledPackages: [
+      "exception-reporting"
+    ]
+    telemetryConsent: "no"
+  welcome:
+    showOnStartup: false
