@@ -1,10 +1,10 @@
-"*":
+'*':
   core:
     disabledPackages: [
-      "exception-reporting"
+      'exception-reporting'
     ]
     restorePreviousWindowsOnStart: false
-    telemetryConsent: "no"
+    telemetryConsent: 'no'
   welcome:
     showOnStartup: false
   whitespace:
