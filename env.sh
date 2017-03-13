@@ -16,6 +16,8 @@ ln -fs "$PWD/init.el" ~/.emacs.d/init.el
 
 wget -O https://github.com/atom/atom/releases/download/v1.15.0/atom-amd64.deb
 sudo dpkg -i atom-amd64.deb
+mkdir ~/.atom
+ln -fs "$PWD/keymap.cson" ~/.atom/keymap.cson
 
 sudo apt install pandoc
 
