@@ -3,6 +3,7 @@
     disabledPackages: [
       "exception-reporting"
     ]
+    restorePreviousWindowsOnStart: false
     telemetryConsent: "no"
   welcome:
     showOnStartup: false
