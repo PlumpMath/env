@@ -7,3 +7,5 @@
     telemetryConsent: "no"
   welcome:
     showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
