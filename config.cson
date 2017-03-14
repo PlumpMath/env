@@ -3,6 +3,7 @@
     disabledPackages: [
       'exception-reporting'
     ]
+    openEmptyEditorOnStart: false
     restorePreviousWindowsOnStart: false
     telemetryConsent: 'no'
   welcome:
