@@ -9,6 +9,10 @@
       'exception-reporting'
     ]
     openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      'atom-latex'
+      'latextools'
+    ]
     restorePreviousWindowsOnStart: false
     telemetryConsent: 'no'
   welcome:
