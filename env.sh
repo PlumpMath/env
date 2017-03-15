@@ -22,6 +22,7 @@ apm install keyboard-scroll@0.7.0
 apm install latextools@0.8.5
 ln -fs "$PWD/config.cson" ~/.atom/config.cson
 ln -fs "$PWD/keymap.cson" ~/.atom/keymap.cson
+ln -fs "$PWD/snippets.cson" ~/.atom/snippets.cson
 
 sudo apt install pandoc
 
