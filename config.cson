@@ -2,6 +2,8 @@
   'advanced-open-file':
     fuzzyMatch: true
     helmDirSwitch: true
+  'atom-latex':
+    preview_after_build: 'Do nothing'
   core:
     disabledPackages: [
       'exception-reporting'

@@ -17,12 +17,13 @@ ln -fs "$PWD/init.el" ~/.emacs.d/init.el
 wget -O https://github.com/atom/atom/releases/download/v1.15.0/atom-amd64.deb
 sudo dpkg -i atom-amd64.deb
 apm install advanced-open-file@0.16.6
+apm install atom-latex@0.7.1
 ln -fs "$PWD/config.cson" ~/.atom/config.cson
 ln -fs "$PWD/keymap.cson" ~/.atom/keymap.cson
 
 sudo apt install pandoc
 
-sudo apt install texlive texlive-xetex
+sudo apt install texlive texlive-xetex latexmk
 
 sudo apt install clang
 
