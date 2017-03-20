@@ -17,7 +17,7 @@ ln -fs "$PWD/init.el" ~/.emacs.d/init.el
 wget -O https://github.com/atom/atom/releases/download/v1.15.0/atom-amd64.deb
 sudo dpkg -i atom-amd64.deb
 apm install advanced-open-file@0.16.6
-apm install atom-latex@0.7.1
+apm install atom-latex@0.7.2
 apm install keyboard-scroll@0.7.0
 apm install latextools@0.8.5
 ln -fs "$PWD/config.cson" ~/.atom/config.cson

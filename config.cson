@@ -3,6 +3,7 @@
     fuzzyMatch: true
     helmDirSwitch: true
   'atom-latex':
+    hide_log_if_success: true
     preview_after_build: 'Do nothing'
   core:
     disabledPackages: [
